@@ -1,0 +1,154 @@
+{
+    "scanner": "nmap",
+    "args": "nmap -Pn -oX - -T3 -sU -p 29070 --stats-every 1s localhost",
+    "start": -62135596800,
+    "startstr": "Wed Aug  9 10:08:04 2017",
+    "version": "7.40",
+    "profile_name": "",
+    "xmloutputversion": "1.04",
+    "scaninfo": {
+        "type": "udp",
+        "protocol": "udp",
+        "numservices": 1,
+        "services": "29070",
+        "scanflags": ""
+    },
+    "verbose": {
+        "level": 0
+    },
+    "debugging": {
+        "level": 0
+    },
+    "taskbegin": null,
+    "taskprogress": [
+        {
+            "task": "UDP Scan",
+            "time": -62135596800,
+            "percent": 50,
+            "remaining": 2,
+            "etc": -62135596800
+        },
+        {
+            "task": "UDP Scan",
+            "time": -62135596800,
+            "percent": 99.99,
+            "remaining": 1,
+            "etc": -62135596800
+        }
+    ],
+    "taskend": null,
+    "prescripts": null,
+    "postscripts": null,
+    "hosts": [
+        {
+            "starttime": -62135596800,
+            "endtime": -62135596800,
+            "comment": "",
+            "status": {
+                "state": "up",
+                "reason": "user-set",
+                "reason_ttl": 0
+            },
+            "addresses": [
+                {
+                    "addr": "127.0.0.1",
+                    "addrtype": "ipv4",
+                    "vendor": ""
+                }
+            ],
+            "hostnames": [
+                {
+                    "name": "localhost",
+                    "type": "user"
+                },
+                {
+                    "name": "localhost",
+                    "type": "PTR"
+                }
+            ],
+            "smurfs": null,
+            "ports": [
+                {
+                    "protocol": "udp",
+                    "id": 29070,
+                    "state": {
+                        "state": "open|filtered",
+                        "reason": "no-response",
+                        "reason_ttl": 0,
+                        "reason_ip": ""
+                    },
+                    "owner": {
+                        "name": ""
+                    },
+                    "service": {
+                        "name": "unknown",
+                        "conf": 3,
+                        "method": "table",
+                        "version": "",
+                        "product": "",
+                        "extrainfo": "",
+                        "tunnel": "",
+                        "proto": "",
+                        "rpcnum": "",
+                        "lowver": "",
+                        "hiver": "",
+                        "hostname": "",
+                        "ostype": "",
+                        "devicetype": "",
+                        "servicefp": "",
+                        "cpes": null
+                    },
+                    "scripts": null
+                }
+            ],
+            "extraports": null,
+            "os": {
+                "portsused": null,
+                "osmatches": null,
+                "osfingerprints": null
+            },
+            "distance": {
+                "value": 0
+            },
+            "uptime": {
+                "seconds": 0,
+                "lastboot": ""
+            },
+            "tcpsequence": {
+                "index": 0,
+                "difficulty": "",
+                "vaules": ""
+            },
+            "ipidsequence": {
+                "class": "",
+                "values": ""
+            },
+            "tcptssequence": {
+                "class": "",
+                "values": ""
+            },
+            "hostscripts": null,
+            "trace": {
+                "proto": "",
+                "port": 0,
+                "hops": null
+            }
+        }
+    ],
+    "targets": null,
+    "runstats": {
+        "finished": {
+            "time": -62135596800,
+            "timestr": "Wed Aug  9 10:08:06 2017",
+            "elapsed": 2.06,
+            "summary": "Nmap done at Wed Aug  9 10:08:06 2017; 1 IP address (1 host up) scanned in 2.06 seconds",
+            "exit": "success",
+            "errormsg": ""
+        },
+        "hosts": {
+            "up": 1,
+            "down": 0,
+            "total": 1
+        }
+    }
+}

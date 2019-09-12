@@ -1,0 +1,19 @@
+# Valid commModes are only pull or push
+CommMode = "push"
+
+# If push mode is specified then following section is mandatory 
+[Push]
+AgentEndPoint ="http://agent:8080/"
+BufferLen = 10
+
+[Check]
+Target  = "localhost:3000"
+Opts = "{}"
+CheckID ="id"
+CheckTypeName="typeName"
+CheckTypeVersion="2"
+
+[Log]
+LogFmt  =  "text"
+LogLevel = "info"
+
