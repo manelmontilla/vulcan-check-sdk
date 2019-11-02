@@ -8,6 +8,7 @@ import (
 	"sync"
 	"time"
 
+	"github.com/kr/pretty"
 	"github.com/manelmontilla/vulcan-check-sdk/agent"
 	"github.com/manelmontilla/vulcan-check-sdk/config"
 	"github.com/manelmontilla/vulcan-check-sdk/internal/local"
@@ -15,7 +16,6 @@ import (
 	"github.com/manelmontilla/vulcan-check-sdk/internal/push"
 	"github.com/manelmontilla/vulcan-check-sdk/state"
 	"github.com/manelmontilla/vulcan-check-sdk/tools"
-	"github.com/kr/pretty"
 	log "github.com/sirupsen/logrus"
 )
 

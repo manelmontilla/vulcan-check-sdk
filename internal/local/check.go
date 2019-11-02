@@ -6,10 +6,10 @@ import (
 	"os/signal"
 	"syscall"
 
+	report "github.com/adevinta/vulcan-report"
 	"github.com/manelmontilla/vulcan-check-sdk/agent"
 	"github.com/manelmontilla/vulcan-check-sdk/config"
 	astate "github.com/manelmontilla/vulcan-check-sdk/state"
-	report "github.com/adevinta/vulcan-report"
 	log "github.com/sirupsen/logrus"
 )
 

@@ -11,12 +11,12 @@ import (
 	"github.com/kr/pretty"
 	log "github.com/sirupsen/logrus"
 
+	report "github.com/adevinta/vulcan-report"
 	"github.com/manelmontilla/vulcan-check-sdk/agent"
 	"github.com/manelmontilla/vulcan-check-sdk/config"
 	"github.com/manelmontilla/vulcan-check-sdk/internal/logging"
 	"github.com/manelmontilla/vulcan-check-sdk/state"
 	"github.com/manelmontilla/vulcan-check-sdk/tools"
-	report "github.com/adevinta/vulcan-report"
 )
 
 type CheckerHandleRun func(ctx context.Context, target string, opts string, s state.State) error

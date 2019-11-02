@@ -10,8 +10,8 @@ import (
 	"os/exec"
 	"time"
 
-	log "github.com/sirupsen/logrus"
 	"github.com/manelmontilla/vulcan-check-sdk/internal/logging"
+	log "github.com/sirupsen/logrus"
 )
 
 const (

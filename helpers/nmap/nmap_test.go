@@ -10,12 +10,12 @@ import (
 	"testing"
 	"time"
 
-	check "github.com/manelmontilla/vulcan-check-sdk"
-	"github.com/manelmontilla/vulcan-check-sdk/state"
 	report "github.com/adevinta/vulcan-report"
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
 	gonmap "github.com/lair-framework/go-nmap"
+	check "github.com/manelmontilla/vulcan-check-sdk"
+	"github.com/manelmontilla/vulcan-check-sdk/state"
 )
 
 const (

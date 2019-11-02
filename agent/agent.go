@@ -3,8 +3,8 @@ package agent
 import (
 	"time"
 
-	"github.com/manelmontilla/vulcan-check-sdk/config"
 	vulcanreport "github.com/adevinta/vulcan-report"
+	"github.com/manelmontilla/vulcan-check-sdk/config"
 )
 
 const (

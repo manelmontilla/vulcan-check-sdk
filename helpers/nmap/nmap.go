@@ -9,9 +9,9 @@ import (
 	"strconv"
 	"strings"
 
+	gonmap "github.com/lair-framework/go-nmap"
 	check "github.com/manelmontilla/vulcan-check-sdk"
 	"github.com/manelmontilla/vulcan-check-sdk/state"
-	gonmap "github.com/lair-framework/go-nmap"
 )
 
 var (
