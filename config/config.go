@@ -9,7 +9,7 @@ import (
 
 	"github.com/BurntSushi/toml"
 
-	"github.com/adevinta/vulcan-check-sdk/internal/push/rest"
+	"github.com/manelmontilla/vulcan-check-sdk/internal/push/rest"
 )
 
 const (

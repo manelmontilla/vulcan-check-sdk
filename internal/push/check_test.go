@@ -11,11 +11,11 @@ import (
 	"github.com/kr/pretty"
 	log "github.com/sirupsen/logrus"
 
-	"github.com/adevinta/vulcan-check-sdk/agent"
-	"github.com/adevinta/vulcan-check-sdk/config"
-	"github.com/adevinta/vulcan-check-sdk/internal/logging"
-	"github.com/adevinta/vulcan-check-sdk/state"
-	"github.com/adevinta/vulcan-check-sdk/tools"
+	"github.com/manelmontilla/vulcan-check-sdk/agent"
+	"github.com/manelmontilla/vulcan-check-sdk/config"
+	"github.com/manelmontilla/vulcan-check-sdk/internal/logging"
+	"github.com/manelmontilla/vulcan-check-sdk/state"
+	"github.com/manelmontilla/vulcan-check-sdk/tools"
 	report "github.com/adevinta/vulcan-report"
 )
 

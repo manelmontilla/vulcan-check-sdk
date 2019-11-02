@@ -9,7 +9,7 @@ import (
 
 	"github.com/kr/pretty"
 
-	"github.com/adevinta/vulcan-check-sdk/internal/push/rest"
+	"github.com/manelmontilla/vulcan-check-sdk/internal/push/rest"
 )
 
 type overrideTest struct {

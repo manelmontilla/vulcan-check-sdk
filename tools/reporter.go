@@ -7,7 +7,7 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/adevinta/vulcan-check-sdk/agent"
+	"github.com/manelmontilla/vulcan-check-sdk/agent"
 )
 
 // Reporter represents a "fake" agent suitable to be used in tests.

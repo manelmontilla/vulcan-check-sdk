@@ -4,7 +4,7 @@ import (
 	"time"
 
 	log "github.com/sirupsen/logrus"
-	"github.com/adevinta/vulcan-check-sdk/agent"
+	"github.com/manelmontilla/vulcan-check-sdk/agent"
 )
 
 // StatePusher defines the shape a pusher communications component must satisfy in order to be used

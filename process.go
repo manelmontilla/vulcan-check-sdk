@@ -11,7 +11,7 @@ import (
 	"time"
 
 	log "github.com/sirupsen/logrus"
-	"github.com/adevinta/vulcan-check-sdk/internal/logging"
+	"github.com/manelmontilla/vulcan-check-sdk/internal/logging"
 )
 
 const (

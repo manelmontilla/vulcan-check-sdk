@@ -5,7 +5,7 @@ import (
 	"testing"
 
 	log "github.com/sirupsen/logrus"
-	"github.com/adevinta/vulcan-check-sdk/config"
+	"github.com/manelmontilla/vulcan-check-sdk/config"
 )
 
 type buildRootLogTestArgs struct {

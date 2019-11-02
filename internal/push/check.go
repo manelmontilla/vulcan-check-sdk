@@ -6,13 +6,13 @@ import (
 	"sync"
 	"time"
 
+	"github.com/manelmontilla/vulcan-check-sdk/agent"
+	"github.com/manelmontilla/vulcan-check-sdk/config"
+	"github.com/manelmontilla/vulcan-check-sdk/helpers"
+	"github.com/manelmontilla/vulcan-check-sdk/internal/logging"
+	"github.com/manelmontilla/vulcan-check-sdk/internal/push/rest"
+	"github.com/manelmontilla/vulcan-check-sdk/state"
 	log "github.com/sirupsen/logrus"
-	"github.com/adevinta/vulcan-check-sdk/agent"
-	"github.com/adevinta/vulcan-check-sdk/config"
-	"github.com/adevinta/vulcan-check-sdk/helpers"
-	"github.com/adevinta/vulcan-check-sdk/internal/logging"
-	"github.com/adevinta/vulcan-check-sdk/internal/push/rest"
-	"github.com/adevinta/vulcan-check-sdk/state"
 )
 
 // API defines the shape the api, that basically ony listens for events to abort the check,

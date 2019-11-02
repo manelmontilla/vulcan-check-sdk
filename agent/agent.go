@@ -3,7 +3,7 @@ package agent
 import (
 	"time"
 
-	"github.com/adevinta/vulcan-check-sdk/config"
+	"github.com/manelmontilla/vulcan-check-sdk/config"
 	vulcanreport "github.com/adevinta/vulcan-report"
 )
 

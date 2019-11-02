@@ -11,7 +11,7 @@ import (
 	"os/exec"
 	"syscall"
 
-	"github.com/adevinta/vulcan-check-sdk/internal/logging"
+	"github.com/manelmontilla/vulcan-check-sdk/internal/logging"
 	log "github.com/sirupsen/logrus"
 )
 

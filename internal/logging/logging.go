@@ -1,7 +1,7 @@
 package logging
 
 import (
-	"github.com/adevinta/vulcan-check-sdk/config"
+	"github.com/manelmontilla/vulcan-check-sdk/config"
 	log "github.com/sirupsen/logrus"
 )
 
