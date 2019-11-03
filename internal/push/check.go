@@ -11,6 +11,7 @@ import (
 	"github.com/manelmontilla/vulcan-check-sdk/helpers"
 	"github.com/manelmontilla/vulcan-check-sdk/internal/logging"
 	"github.com/manelmontilla/vulcan-check-sdk/internal/push/rest"
+	"github.com/manelmontilla/vulcan-check-sdk/internal/push/simplemq"
 	"github.com/manelmontilla/vulcan-check-sdk/state"
 	log "github.com/sirupsen/logrus"
 )
@@ -134,17 +135,32 @@ func NewCheckWithConfig(name string, checker Checker, logger *log.Entry, conf *c
 		config: conf,
 	}
 	c.ctx, c.cancel = context.WithCancel(context.Background())
-	pushLogger := logging.BuildRootLogWithNameAndConfig("sdk.restPusher", conf, name)
-	pussher := rest.NewRestPusher(conf.Push, conf.Check.CheckID, pushLogger)
+
 	r := agent.NewReportFromConfig(conf.Check)
 	stateLogger := logging.BuildRootLogWithNameAndConfig("sdk.pushState", conf, name)
 	agentState := agent.State{Report: r}
+
+	pussher := pusherFromConfig(name, conf)
 	c.checkState = newState(agentState, pussher, stateLogger)
 	c.api = newPushAPI(logger, c)
+
 	// Initialize a sync point for goroutines to wait for the checker run method
 	// to be finished, for instance a call to an abort method should wait in this sync point.
 	c.checkerFinished = &sync.WaitGroup{}
 	c.checker = checker
 	c.Logger.Debug("New check created")
 	return c
+}
+
+func pusherFromConfig(checkName string, conf *config.Config) StatePusher {
+	mode := conf.CommMode
+	pushLogger := logging.BuildRootLogWithNameAndConfig("sdk.restPusher", conf, checkName)
+	checkID := conf.Check.CheckID
+	var statePusher StatePusher
+	if mode == "simplemq" {
+		statePusher = simplemq.NewPusher(checkID, conf.Push.AgentAddr, pushLogger)
+	} else {
+		statePusher = rest.NewRestPusher(conf.Push, conf.Check.CheckID, pushLogger)
+	}
+	return statePusher
 }

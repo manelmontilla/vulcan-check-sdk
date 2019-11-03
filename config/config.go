@@ -34,6 +34,9 @@ const (
 	// CommModePush Defines the string representing push communication for check.
 	CommModePush = "push"
 
+	// CommModeSimpleMQ defines the commode that send message status to simplemq.
+	CommModeSimpleMQ = "simplemq"
+
 	confFilePath = "local.toml"
 )
 
