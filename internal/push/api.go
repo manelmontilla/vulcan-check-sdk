@@ -9,8 +9,9 @@ import (
 	log "github.com/sirupsen/logrus"
 )
 
-// APICheck represents the checker the push api communicates with.
-// This is usefull to write unit tests because makes mocking dependencies of this component easier.
+// APICheck represents the checker the push api communicates with. This is
+// usefull to write unit tests because makes mocking dependencies of this
+// component easier.
 type APICheck interface {
 	Abort() error
 }

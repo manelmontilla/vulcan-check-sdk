@@ -154,12 +154,13 @@ func NewCheckWithConfig(name string, checker Checker, logger *log.Entry, conf *c
 
 func pusherFromConfig(checkName string, conf *config.Config) StatePusher {
 	mode := conf.CommMode
-	pushLogger := logging.BuildRootLogWithNameAndConfig("sdk.restPusher", conf, checkName)
 	checkID := conf.Check.CheckID
 	var statePusher StatePusher
-	if mode == "simplemq" {
+	if mode == config.CommModeSimpleMQ {
+		pushLogger := logging.BuildRootLogWithNameAndConfig("sdk.simplemq", conf, checkName)
 		statePusher = simplemq.NewPusher(checkID, conf.Push.AgentAddr, pushLogger)
 	} else {
+		pushLogger := logging.BuildRootLogWithNameAndConfig("sdk.restPusher", conf, checkName)
 		statePusher = rest.NewRestPusher(conf.Push, conf.Check.CheckID, pushLogger)
 	}
 	return statePusher
